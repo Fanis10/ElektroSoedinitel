@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Навигация</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<main class="content">
+			<section class="navigation">
+				<div class="container">
+					<div class="navigation__inner">
+						<ul class="navigation__list">
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="catalog.html">Каталог</a></li>
+							<li><a href="product.html">СНЦ27, СНЦ28, СНЦ29</a></li>
+							<li><a href="vacancies.html">Вакансии</a></li>
+							<li><a href="vacancies-item.html">Вакансия</a></li>
+							<li><a href="news.html">Новости</a></li>
+							<li><a href="team.html">Команда</a></li>
+							<li><a href="delivery.html">Доставка и оплата</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
+							<li>
+								<button class="btn btn-red" data-modal="contactModal">
+									<span>Отправить заявку</span>
+								</button>
+							</li>
+							<li>
+								<button class="btn btn-red" data-modal="contactModal2">
+									<span>Заказ</span>
+								</button>
+							</li>
+							<li>
+								<button class="btn btn-red" data-modal="contactModal3">
+									<span>Спасибо</span>
+								</button>
+							</li>
+							<li>
+								<button class="btn btn-red" data-modal="contactModal4">
+									<span>cookie</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<div class="modal modal-form" id="contactModal">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<img src="img/close.svg" alt="">
+			</button>
+			<div class="modal__content modal-form__content">
+				<div class="modal-form__desc">
+					<a href="" class="modal__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<form class="form">
+						<div class="form-group input-name">
+							<input type="text" placeholder="">
+							<span class="input-title">ФИО</span>
+						</div>
+						<div class="form-group input-company">
+							<input type="text" placeholder="">
+							<span class="input-title">Название компании</span>
+						</div>
+						<div class="form-group input-inn">
+							<input type="text" placeholder="">
+							<span class="input-title">ИНН Вашей компании</span>
+						</div>
+						<div class="form-group input-city">
+							<input type="text" placeholder="">
+							<span class="input-title">Город</span>
+						</div>
+						<div class="form-group input-email">
+							<input type="email" placeholder="">
+							<span class="input-title">email</span>
+						</div>
+						<div class="form-group input-phone error">
+							<input type="tel" placeholder="">
+							<span class="input-title">телефон</span>
+						</div>
+						<div class="form-group">
+							<textarea placeholder="Что вас интересует? Опишите потребность ..."></textarea>
+						</div>
+						<div class="form-check">
+							<input type="checkbox">
+							<label>Согласен на обработку <a href="">персональных данных</a></label>
+						</div>
+						<button class="form-btn btn btn-red">
+							<span>Отправить</span>
+						</button>
+					</form>
+				</div>
+				<div class="modal-form__img">
+					<img src="img/modal-form__img.webp" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-form modal-form2" id="contactModal2">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<img src="img/close.svg" alt="">
+			</button>
+			<div class="modal__content modal-form__content">
+				<div class="modal-form__desc">
+					<a href="" class="modal__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<h2 class="modal-form__title h2">Заказ</h2>
+					<div class="modal-form__subtitle">ШКМБ 5.282.016</div>
+					<form class="form">
+						<div class="form-group input-name">
+							<input type="text" placeholder="">
+							<span class="input-title">ФИО</span>
+						</div>
+						<div class="form-group input-company">
+							<input type="text" placeholder="">
+							<span class="input-title">Название компании</span>
+						</div>
+						<div class="form-group input-inn">
+							<input type="text" placeholder="">
+							<span class="input-title">ИНН Вашей компании</span>
+						</div>
+						<div class="form-group input-city">
+							<input type="text" placeholder="">
+							<span class="input-title">Город</span>
+						</div>
+						<div class="form-group input-email">
+							<input type="email" placeholder="">
+							<span class="input-title">email</span>
+						</div>
+						<div class="form-group input-phone error">
+							<input type="tel" placeholder="">
+							<span class="input-title">телефон</span>
+						</div>
+						<div class="form-group">
+							<textarea placeholder="Что вас интересует? Опишите потребность ..."></textarea>
+						</div>
+						<div class="form-check">
+							<input type="checkbox">
+							<label>Согласен на обработку <a href="">персональных данных</a></label>
+						</div>
+						<button class="form-btn btn btn-red">
+							<span>Отправить</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-form modal-form2" id="contactModal3">
+		<div class="modal__dialog">
+			<button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+				<img src="img/close.svg" alt="">
+			</button>
+			<div class="modal__content modal-form__content">
+				<div class="modal-form__desc">
+					<a href="" class="modal__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<h2 class="modal-form__title h2">СПАСИБО!</h2>
+					<div class="modal-form__text">Заявка №134 успешно отправлена.</div>
+					<div class="modal-form__info">Наши менеджеры свяжутся с Вами в течение 48 часов</div>
+					<div class="modal-form__group">
+						<div class="modal-form__subtitle2">Отдел маркетинга и сбыта:</div>
+						<div class="modal-form__phones">
+							<a class="modal-form__phone" href="tel:+78559326846">+7 (855) 932-68-46</a>
+							<a class="modal-form__phone" href="tel:+78559349227">+7 (855) 934-92-27</a>
+							<a class="modal-form__phone" href="tel:+78432023710">+7 (843) 202-37-10</a>
+							<a class="modal-form__phone" href="tel:+78432023757">+7 (843) 202-37-57</a>
+						</div>
+					</div>
+					<button class="modal-form__btn btn btn-red _close-modal">
+						<span>Закрыть</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-form cookie" id="contactModal4">
+		<div class="modal__dialog">
+			<div class="modal-form__desc">
+				<div class="cookie-text">Мы используем файлы cookie, чтобы обеспечивать правильную работу веб-сайта. Оставаясь с нами <a href="">Вы соглашаетесь с использованием cookies</a></div>
+				<button class="modal-form__btn btn btn-red _close-modal">
+					<span>Закрыть</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
+
+<style>
+	.navigation {
+		padding: 50px 0;
+	}
+	.navigation__list {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 24px;
+	}
+	.navigation__list li a {
+		font-size: 20px;
+		line-height: 100%;
+	}
+	.navigation__list li a:hover {
+		color: #ed1c24;
+	}
+	.navigation__list li button {
+		height: 60px;
+		padding: 5px 40px;
+		font-size: 20px;
+	}
+</style>
