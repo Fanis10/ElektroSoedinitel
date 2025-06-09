@@ -81,13 +81,15 @@
                         <span>Каталог</span>
                     </a>
                 </div>
-                <ul class="header__list">
-                    <li><a href="">О компании</a></li>
-                    <li><a href="">Вакансии</a></li>
-                    <li><a href="">Сертификаты</a></li>
-                    <li><a href="">Доставка и оплата</a></li>
-                    <li><a href="">Контакты</a></li>
-                </ul>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">Сертификаты</a></li>
+                        <li><a href="">Доставка и оплата</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
                 <div class="header__btns">
                     <a href="" download="" class="header__btn btn btn-gray">
                         <span>Скачать каталог</span>
@@ -254,9 +256,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="map">
-							<iframe src="https://yandex.ru/map-widget/v1/?ll=53.480232%2C54.603016&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NTA0OTY5NTEwEtUB0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQotCw0YLQsNGA0YHRgtCw0L0gKNCi0LDRgtCw0YDRgdGC0LDQvSksINCu0YLQsNC30LjQvdGB0LrQuNC5INGA0LDQudC-0L0sINC_0L7RgdGR0LvQvtC6INCz0L7RgNC-0LTRgdC60L7Qs9C-INGC0LjQv9CwINCj0YDRg9GB0YHRgywg0J_RgNC-0LzRi9GI0LvQtdC90L3Ri9C5INC_0LXRgNC10YPQu9C-0LosIDE4IgoNl-tVQhXYaVpC&z=16.02" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-						</div>
+						<div id="map" class="map"></div>
 					</div>
 				</div>
 			</section>
@@ -364,4 +364,42 @@
 </body>
 
 </html>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+	ymaps.ready(init);
+
+	function init() {
+		var myMap = new ymaps.Map("map", {
+			center: [54.603362, 53.480069],
+			zoom: 16
+		});
+
+		var points = [
+			{
+				coords: [54.603362, 53.480069],
+				balloonContent: "Промышленный переулок, 18",
+				iconUrl: "img/location.svg"
+			},
+		];
+
+		function addPlacemark(point) {
+			var placemark = new ymaps.Placemark(point.coords, {
+				balloonContent: point.balloonContent
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: point.iconUrl,
+				iconImageSize: [50, 50],
+				iconImageOffset: [-15, -15],
+				balloonHideOnClick: false,
+				hideIconOnBalloonOpen: true
+			});
+			myMap.geoObjects.add(placemark);
+		}
+
+		points.forEach(function(point) {
+			addPlacemark(point);
+		});
+	}
+</script>
 
